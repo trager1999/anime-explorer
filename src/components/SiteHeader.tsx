@@ -1,14 +1,22 @@
+import { Link, NavLink } from "react-router-dom";
+
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <a className="brand" href="/" aria-label="Anime Explorer home">
-        <span className="brand__mark">A<span>✦</span></span>
+      <Link className="brand" to="/" aria-label="Anime Explorer home">
+        <span className="brand__mark">A<span>ג¦</span></span>
         <span className="brand__name">ANIME<span>EXPLORER</span></span>
-      </a>
+      </Link>
       <nav className="header-nav" aria-label="Main navigation">
-        <a className="header-nav__link header-nav__link--active" href="#explore">Explore</a>
+        <NavLink
+          className={({ isActive }) => `header-nav__link${isActive ? " header-nav__link--active" : ""}`}
+          to="/"
+          end
+        >
+          Explore
+        </NavLink>
         <span className="header-nav__link header-nav__link--muted">Discover</span>
-        <span className="header-nav__link header-nav__link--muted">About</span>
+        <a className="header-nav__link header-nav__link--muted" href="#top">About</a>
       </nav>
       <div className="header-status"><span /> CURATED ANIME INDEX</div>
     </header>
