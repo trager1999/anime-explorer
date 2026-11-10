@@ -9,13 +9,15 @@ export function AnimeCard({ anime }: AnimeCardProps) {
   return (
     <Link className="anime-card-link" to={`/anime/${anime.id}`} aria-label={`View details for ${anime.title}`}>
       <article className="anime-card">
-        <div className={`poster poster--${anime.accent}`}>
-          <div className="poster__orbit poster__orbit--one" />
-          <div className="poster__orbit poster__orbit--two" />
-          <span className="poster__eyebrow">ANIME EXPLORER / 0{anime.id}</span>
-          <span className="poster__symbol" aria-hidden="true">{anime.symbol}</span>
+        <div className="poster poster--image">
+          {anime.imageUrl ? (
+            <img className="poster__image" src={anime.imageUrl} alt={`${anime.title} poster`} loading="lazy" />
+          ) : (
+            <div className="poster__placeholder">ANIME EXPLORER</div>
+          )}
+          <span className="poster__eyebrow">ANIME EXPLORER / {anime.id}</span>
           <div className="poster__bottom">
-            <span className="poster__year">{anime.year}</span>
+            <span className="poster__year">{anime.year ?? "—"}</span>
             <span className="poster__label">FEATURED SERIES</span>
           </div>
         </div>
@@ -25,12 +27,12 @@ export function AnimeCard({ anime }: AnimeCardProps) {
               <h3>{anime.title}</h3>
               <p className="anime-card__subtitle">{anime.englishTitle}</p>
             </div>
-            <div className="score"><span>★</span> {anime.score.toFixed(1)}</div>
+            <div className="score"><span>★</span> {anime.score ? anime.score.toFixed(1) : "N/A"}</div>
           </div>
           <p className="anime-card__synopsis">{anime.synopsis}</p>
           <div className="anime-card__meta">
-            <span>{anime.year}</span>
-            <span>{anime.episodes} EP</span>
+            <span>{anime.year ?? "Year unknown"}</span>
+            <span>{anime.episodes ?? "?"} EP</span>
             <span>{anime.status}</span>
           </div>
           <div className="tag-list">
@@ -38,7 +40,7 @@ export function AnimeCard({ anime }: AnimeCardProps) {
               <span className="tag" key={genre}>{genre}</span>
             ))}
           </div>
-          <span className="anime-card__more">VIEW DETAILS ↗</span>
+          <span className="anime-card__more">VIEW DETAILS →</span>
         </div>
       </article>
     </Link>
