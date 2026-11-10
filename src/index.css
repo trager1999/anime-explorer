@@ -1,0 +1,3 @@
+* { box-sizing: border-box; }
+html { min-width: 320px; background: #090811; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }

@@ -1,0 +1,203 @@
+[
+  {
+    "id": 1,
+    "title": "Frieren: Beyond Journey's End",
+    "englishTitle": "Sousou no Frieren",
+    "score": 9.3,
+    "year": 2023,
+    "episodes": 28,
+    "status": "Completed",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "synopsis": "An elf mage reflects on friendship, memory, and the meaning of a life shared with others.",
+    "accent": "violet",
+    "symbol": "✧"
+  },
+  {
+    "id": 2,
+    "title": "Fullmetal Alchemist: Brotherhood",
+    "englishTitle": "Hagane no Renkinjutsushi",
+    "score": 9.1,
+    "year": 2009,
+    "episodes": 64,
+    "status": "Completed",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "synopsis": "Two brothers search for the Philosopher's Stone after a failed attempt to restore what they lost.",
+    "accent": "amber",
+    "symbol": "⚙"
+  },
+  {
+    "id": 3,
+    "title": "Steins;Gate",
+    "englishTitle": "Steins;Gate",
+    "score": 9.1,
+    "year": 2011,
+    "episodes": 24,
+    "status": "Completed",
+    "genres": [
+      "Drama",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "synopsis": "A group of friends discover a way to send messages to the past, with unexpected consequences.",
+    "accent": "cyan",
+    "symbol": "⌁"
+  },
+  {
+    "id": 4,
+    "title": "Attack on Titan",
+    "englishTitle": "Shingeki no Kyojin",
+    "score": 9.1,
+    "year": 2013,
+    "episodes": 25,
+    "status": "Completed",
+    "genres": [
+      "Action",
+      "Drama",
+      "Fantasy"
+    ],
+    "synopsis": "Humanity fights for survival behind enormous walls in a world threatened by Titans.",
+    "accent": "rose",
+    "symbol": "⚔"
+  },
+  {
+    "id": 5,
+    "title": "Violet Evergarden",
+    "englishTitle": "Violet Evergarden",
+    "score": 8.7,
+    "year": 2018,
+    "episodes": 13,
+    "status": "Completed",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Slice of Life"
+    ],
+    "synopsis": "A former soldier learns to understand emotions while writing letters for other people.",
+    "accent": "blue",
+    "symbol": "✉"
+  },
+  {
+    "id": 6,
+    "title": "Jujutsu Kaisen",
+    "englishTitle": "Jujutsu Kaisen",
+    "score": 8.6,
+    "year": 2020,
+    "episodes": 24,
+    "status": "Completed",
+    "genres": [
+      "Action",
+      "Supernatural"
+    ],
+    "synopsis": "A student enters the world of cursed energy after an encounter with a dangerous object.",
+    "accent": "violet",
+    "symbol": "呪"
+  },
+  {
+    "id": 7,
+    "title": "Demon Slayer",
+    "englishTitle": "Kimetsu no Yaiba",
+    "score": 8.5,
+    "year": 2019,
+    "episodes": 26,
+    "status": "Completed",
+    "genres": [
+      "Action",
+      "Fantasy"
+    ],
+    "synopsis": "A determined young swordsman searches for a cure for his sister after tragedy strikes.",
+    "accent": "green",
+    "symbol": "刀"
+  },
+  {
+    "id": 8,
+    "title": "Your Lie in April",
+    "englishTitle": "Shigatsu wa Kimi no Uso",
+    "score": 8.6,
+    "year": 2014,
+    "episodes": 22,
+    "status": "Completed",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Music"
+    ],
+    "synopsis": "A pianist rediscovers music and emotion after meeting a spirited violinist.",
+    "accent": "rose",
+    "symbol": "♫"
+  },
+  {
+    "id": 9,
+    "title": "Made in Abyss",
+    "englishTitle": "Made in Abyss",
+    "score": 8.6,
+    "year": 2017,
+    "episodes": 13,
+    "status": "Completed",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "synopsis": "Two young explorers descend into a mysterious abyss filled with wonders and danger.",
+    "accent": "amber",
+    "symbol": "◇"
+  },
+  {
+    "id": 10,
+    "title": "Mob Psycho 100",
+    "englishTitle": "Mob Psycho 100",
+    "score": 8.5,
+    "year": 2016,
+    "episodes": 12,
+    "status": "Completed",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Supernatural"
+    ],
+    "synopsis": "A quiet student with extraordinary psychic abilities tries to live an ordinary life.",
+    "accent": "cyan",
+    "symbol": "✺"
+  },
+  {
+    "id": 11,
+    "title": "Blue Lock",
+    "englishTitle": "Blue Lock",
+    "score": 8.2,
+    "year": 2022,
+    "episodes": 24,
+    "status": "Completed",
+    "genres": [
+      "Sports",
+      "Drama"
+    ],
+    "synopsis": "Young football players compete in an intense program designed to create the ultimate striker.",
+    "accent": "blue",
+    "symbol": "球"
+  },
+  {
+    "id": 12,
+    "title": "Spy x Family",
+    "englishTitle": "Spy x Family",
+    "score": 8.4,
+    "year": 2022,
+    "episodes": 25,
+    "status": "Completed",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Slice of Life"
+    ],
+    "synopsis": "A spy, an assassin, and a telepath form an unusual family while hiding their secrets.",
+    "accent": "green",
+    "symbol": "✦"
+  }
+]
