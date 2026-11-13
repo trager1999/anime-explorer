@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getAnimeById } from "../services/jikan";
@@ -8,14 +9,11 @@ export function AnimeDetailsPage() {
   const animeId = Number(id);
   const isValidId = Number.isInteger(animeId) && animeId > 0;
   const [anime, setAnime] = useState<Anime | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(isValidId);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (!isValidId) {
-      setIsLoading(false);
-      return;
-    }
+    if (!isValidId) return;
 
     const controller = new AbortController();
 
@@ -53,7 +51,14 @@ export function AnimeDetailsPage() {
   }
 
   if (isLoading) {
-    return <section className="details-section"><div className="api-state" role="status"><span className="api-state__spinner" /><p>Loading anime details...</p></div></section>;
+    return (
+      <section className="details-section">
+        <div className="api-state" role="status">
+          <span className="api-state__spinner" />
+          <p>Loading anime details...</p>
+        </div>
+      </section>
+    );
   }
 
   if (error || !anime) {
@@ -62,7 +67,7 @@ export function AnimeDetailsPage() {
         <div className="not-found">
           <p className="eyebrow">UNAVAILABLE</p>
           <h1>{error ? "Couldn’t load this anime." : "Anime not found."}</h1>
-          <p>{error || "This title could not be found in the Jikan collection."}</p>
+          <p>{error || "This title could not be found in the Tenrai collection."}</p>
           <Link className="details-back" to="/">← BACK TO EXPLORE</Link>
         </div>
       </section>
@@ -89,7 +94,9 @@ export function AnimeDetailsPage() {
           <p className="eyebrow">COLLECTION / TITLE {String(anime.id).padStart(3, "0")}</p>
           <h1>{anime.title}</h1>
           <p className="details-english-title">{anime.englishTitle}</p>
-          <div className="details-score"><span>★</span> {anime.score ? anime.score.toFixed(1) : "N/A"} <small>MYANIMELIST SCORE</small></div>
+          <div className="details-score">
+            <span>★</span> {anime.score ? anime.score.toFixed(1) : "N/A"} <small>MYANIMELIST SCORE</small>
+          </div>
           <p className="details-synopsis">{anime.synopsis}</p>
           <div className="details-facts">
             <div><span>YEAR</span><strong>{anime.year ?? "Unknown"}</strong></div>

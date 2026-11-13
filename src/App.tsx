@@ -1,3 +1,4 @@
+
 import { useEffect, useMemo, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { AnimeGrid } from "./components/AnimeGrid";
@@ -34,7 +35,20 @@ function ExplorePage() {
 
   useEffect(() => {
     const controller = new AbortController();
-    void loadAnime(controller.signal);
+
+    const fetchAnime = async () => {
+      try {
+        const anime = await getTopAnime(controller.signal);
+        setAnimeList(anime);
+      } catch (err) {
+        if (err instanceof Error && err.name === "AbortError") return;
+        setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+      } finally {
+        if (!controller.signal.aborted) setIsLoading(false);
+      }
+    };
+
+    void fetchAnime();
     return () => controller.abort();
   }, []);
 
@@ -84,7 +98,7 @@ function ExplorePage() {
         {isLoading && (
           <div className="api-state" role="status">
             <span className="api-state__spinner" />
-            <p>Loading the collection from Jikan...</p>
+            <p>Loading the collection from Tenrai...</p>
           </div>
         )}
 
