@@ -83,6 +83,14 @@ describe("Tenrai anime service", () => {
     expect(result.year).toBe(2009);
   });
 
+  it("rejects an anime when the returned MAL id does not match the requested id", async () => {
+  mockFetch({ data: makeAnime({ mal_id: 9999 }) });
+
+  await expect(getAnimeById(5114)).rejects.toThrow(
+    "Anime not found. The returned ID does not match the requested ID.",
+  );
+});
+
   it("uses safe defaults when optional API fields are missing", async () => {
     const anime = makeAnime({
       title_english: null,

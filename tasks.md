@@ -1,4 +1,4 @@
-# Anime Explorer – Development Tasks
+﻿# Anime Explorer ׳’ג‚¬ג€ Development Tasks
 
 ## Task 1 [X] Project Setup and Local Anime Data
 - Initialize the React + Vite + TypeScript project.
@@ -14,7 +14,7 @@
 - TypeScript types are used without `any`.
 - Create at least four reusable custom components, each in a separate file.
 
-## Task 2 – Navigation and Routing
+## Task 2 [X] ׳’ג‚¬ג€ Navigation and Routing
 - Install and configure React Router.
 - Create routes for Explore, Anime Details, Favorites, and Statistics.
 - Implement the dynamic route `/anime/:id`.
@@ -28,18 +28,18 @@
 - At least four custom components exist in separate files.
 - `npm run build` completes without errors.
 
-## Task 3 – Jikan API Integration
-- Replace the local anime list with data from the Jikan API.
+## Task 3 [X] - Tenrai API Integration
+- Replace the local anime list with data from the Tenrai API (Jikan-compatible response structure).
 - Fetch data using `useEffect`.
 - Create TypeScript types for the API response.
 - Handle loading, error, and successful data states.
 
 **Done when:**
-- Anime data is retrieved from the public Jikan API.
+- Anime data is retrieved from the Tenrai API using a Jikan-compatible response structure.
 - Loading and error messages are displayed appropriately.
 - The Explore page displays the retrieved anime.
 
-## Task 4 – Vitest Setup and Initial Tests
+## Task 4 [X] ׳’ג‚¬ג€ Vitest Setup and Initial Tests
 - Install and configure Vitest.
 - Install `@vitest/ui`.
 - Add `test` and `test:ui` scripts to `package.json`.
@@ -50,7 +50,7 @@
 - At least five tests pass.
 - `npm run test:ui` opens the Vitest UI.
 
-## Task 5 – Anime Details Page
+## Task 5 [X] ׳’ג‚¬ג€ Anime Details Page
 - Display the selected anime's detailed information.
 - Include synopsis, score, episodes, release year, status, genres, and studios.
 - Add a button for managing favorites.
@@ -60,7 +60,7 @@
 - Missing API information is handled gracefully.
 - The favorite button responds to user interaction.
 
-## Task 6 – Favorites Functionality
+## Task 6 [X] ׳’ג‚¬ג€ Favorites Functionality
 - Implement adding and removing anime from favorites.
 - Save favorites in LocalStorage.
 - Load saved favorites when the application starts.
@@ -71,7 +71,7 @@
 - Favorites remain saved after refreshing the browser.
 - The Favorites page displays saved anime.
 
-## Task 7 – Explore Search and Genre Filtering
+## Task 7 [X] ׳’ג‚¬ג€ Explore Search and Genre Filtering
 - Implement search by anime title.
 - Implement filtering by genre.
 - Allow search and filtering to work together.
@@ -82,7 +82,7 @@
 - Genre filtering works correctly.
 - Search and filtering can be used simultaneously.
 
-## Task 8 – Favorites Page
+## Task 8 [X] ׳’ג‚¬ג€ Favorites Page
 - Complete the Favorites page layout.
 - Display saved anime using reusable anime cards.
 - Add navigation to anime details.
@@ -94,7 +94,7 @@
 - Users can open details or remove favorites.
 - The empty state appears when the list is empty.
 
-## Task 9 – Statistics Page
+## Task 9 [X] ׳’ג‚¬ג€ Statistics Page
 - Calculate the total number of available anime.
 - Calculate the average anime rating.
 - Identify the most common genres.
@@ -106,7 +106,7 @@
 - All required statistics are displayed.
 - Empty or incomplete data does not break the page.
 
-## Task 10 – Cinematic UI and Responsive Design
+## Task 10 [X] ׳’ג‚¬ג€ Cinematic UI and Responsive Design
 - Apply the Dark Cinematic visual style.
 - Use dark backgrounds with purple and blue accents.
 - Improve typography, anime cards, spacing, and hover effects.
@@ -118,8 +118,8 @@
 - The application is usable on narrow screens.
 - Navigation and content remain readable on mobile.
 
-## Task 11 – Testing and Final Quality Checks
-- Expand unit tests for search, filtering, favorites, and statistics.
+## Task 11 [X] ׳’ג‚¬ג€ Testing and Final Quality Checks
+- Add and run automated tests for API service and favorites; manually verify search, filtering, and statistics.
 - Fix identified bugs.
 - Check loading, error, empty, and success states.
 - Verify navigation and dynamic routes.
@@ -130,11 +130,11 @@
 - All four pages work correctly.
 - No critical TypeScript or runtime errors remain.
 
-## Task 12 – Documentation and Final Submission
+## Task 12 [X]׳’ג‚¬ג€ Documentation and Final Submission
 - Write the project README.
 - Document the application features and technologies.
 - Include installation, development, and testing instructions.
-- Document the Jikan API.
+- Document the Tenrai API and its Jikan-compatible response structure.
 - Review `PRD.md`, `tasks.md`, and `PROMPTS.md`.
 - Run the production build.
 - Prepare the public GitHub repository for submission.

@@ -1,4 +1,4 @@
-# Anime Explorer – Product Requirements Document
+﻿# Anime Explorer ג€“ Product Requirements Document
 
 ## 1. Project Overview
 
@@ -17,7 +17,7 @@ Anime fans who want a simple and visually appealing platform to discover anime, 
 - TypeScript
 - React Router
 - CSS
-- Jikan API (MyAnimeList public API)
+- Tenrai API (Jikan-compatible anime data)
 - Vitest
 - LocalStorage for saving favorites
 
@@ -74,20 +74,22 @@ Statistics will be calculated from the anime data available to the application.
 
 ## 5. API Integration
 
-The application will use the public Jikan API.
+The application uses the Tenrai API, which provides anime data in a Jikan-compatible response structure.
 
-Main endpoint:
+Base URL:
+https://api.tenrai.org/v1
 
-https://api.jikan.moe/v4/top/anime
+Endpoints used:
+- Top anime: `/top/anime?limit=25&sfw`
+- Anime details: `/anime/{id}`
 
-The API provides anime information without requiring an API key.
+The API responses are mapped into the application's TypeScript Anime model.
 
-Data will be retrieved using fetch inside React useEffect.
+The application retrieves data using fetch and supports request cancellation through AbortSignal.
 
-The application must handle:
-- Loading state.
-- Error state.
-- Successful data retrieval.
+The application handles loading states, errors (including rate limits), successful data retrieval, and missing anime information.
+
+No API key is configured in the application.
 
 ## 6. Design Requirements
 

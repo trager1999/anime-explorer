@@ -15,3 +15,10 @@
 > PS C:\Users\djsha\anime-explorer> npm.cmd -v
 > 11.20.0
 > PS C:\Users\djsha\anime-explorer>
+## 2026-11-14
+
+**01:29 · ChatGPT**
+> המשך מאיפה שעצרנו
+
+**01:33 · ChatGPT**
+> כן

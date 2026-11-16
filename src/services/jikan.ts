@@ -28,6 +28,7 @@ function mapJikanAnime(item: JikanAnime): Anime {
     episodes: item.episodes,
     status: item.status ?? "Unknown",
     genres: item.genres.map((genre) => genre.name),
+    studios: item.studios?.map((studio) => studio.name) ?? [],
     synopsis: item.synopsis ?? "No synopsis is available for this title.",
     imageUrl,
   };
@@ -63,6 +64,10 @@ export async function getAnimeById(
     `${JIKAN_BASE_URL}/anime/${id}`,
     signal,
   );
+
+  if (!response.data || response.data.mal_id !== id) {
+    throw new Error("Anime not found. The returned ID does not match the requested ID.");
+  }
 
   return mapJikanAnime(response.data);
 }

@@ -7,6 +7,7 @@ export interface Anime {
   episodes: number | null;
   status: string;
   genres: string[];
+  studios: string[];
   synopsis: string;
   imageUrl: string;
 }
@@ -33,6 +34,11 @@ export interface JikanAnime {
   genres: Array<{
     mal_id: number;
     name: string;
+  }>;
+  studios?: Array<{
+    mal_id: number;
+    name: string;
+    type?: string;
   }>;
   aired?: {
     from: string | null;

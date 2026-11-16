@@ -6,6 +6,8 @@ import { HeroSection } from "./components/HeroSection";
 import { SearchBar } from "./components/SearchBar";
 import { SiteHeader } from "./components/SiteHeader";
 import { AnimeDetailsPage } from "./pages/AnimeDetailsPage";
+import { FavoritesPage } from "./pages/FavoritesPage";
+import { StatisticsPage } from "./pages/StatisticsPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { getTopAnime } from "./services/jikan";
 import type { Anime } from "./types";
@@ -152,6 +154,8 @@ function App() {
         <Routes>
           <Route path="/" element={<ExplorePage />} />
           <Route path="/anime/:id" element={<AnimeDetailsPage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="/statistics" element={<StatisticsPage />} />
           <Route path="/explore" element={<Navigate to="/" replace />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

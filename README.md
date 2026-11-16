@@ -1,75 +1,90 @@
-# React + TypeScript + Vite
+﻿# Anime Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cinematic anime discovery application built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Explore popular anime titles.
+- Search anime by title.
+- Filter anime by genre.
+- View detailed anime information.
+- Save and remove favorite anime.
+- Keep favorites saved using LocalStorage.
+- View anime collection statistics.
+- Responsive dark cinematic design.
 
-## React Compiler
+## Technology
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- TypeScript
+- Vite
+- React Router
+- CSS
+- Tenrai API (Jikan-compatible data)
+- Vitest
+- React Testing Library
+- LocalStorage
 
-## Expanding the ESLint configuration
+## API
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The application uses the Tenrai API.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Base URL: https://api.tenrai.org/v1
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Endpoints:
+- Top anime: /top/anime?limit=25&sfw
+- Anime details: /anime/{id}
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+No API key is configured.
 
-```
+## Installation
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Requirements: Node.js and npm.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clone the repository:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+git clone https://github.com/trager1999/anime-explorer.git
 
-```
+Enter the project folder:
+
+cd anime-explorer
+
+Install dependencies:
+
+npm install
+
+Start the application:
+
+npm run dev
+
+## Available Commands
+
+- npm run dev — Start the development server.
+- npm run build — Check TypeScript and create a production build.
+- npm run lint — Run ESLint.
+- npm test — Run automated tests.
+- npm run preview — Preview the production build.
+
+## Testing
+
+The project uses Vitest and React Testing Library.
+
+Automated tests cover API service behavior and favorites functionality.
+
+## Project Structure
+
+- src/components — Reusable UI components.
+- src/context — Favorites state and provider.
+- src/pages — Explore, Details, Favorites, and Statistics pages.
+- src/services — API service and tests.
+- src/types.ts — TypeScript data types.
+- src/App.tsx — Application routes and layout.
+- src/main.tsx — Application entry point.
+
+## Storage
+
+Favorite anime are saved locally in the browser using LocalStorage.
+
+## Project Status
+
+The application includes four main pages, API integration, search and filtering, persistent favorites, statistics, responsive styling, automated tests, and production build support.

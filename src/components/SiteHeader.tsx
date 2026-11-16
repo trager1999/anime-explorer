@@ -15,6 +15,18 @@ export function SiteHeader() {
         >
           Explore
         </NavLink>
+        <NavLink
+          className={({ isActive }) => `header-nav__link${isActive ? " header-nav__link--active" : ""}`}
+          to="/favorites"
+        >
+          Favorites
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => `header-nav__link${isActive ? " header-nav__link--active" : ""}`}
+          to="/statistics"
+        >
+          Statistics
+        </NavLink>
         <span className="header-nav__link header-nav__link--muted">Discover</span>
         <a className="header-nav__link header-nav__link--muted" href="#top">About</a>
       </nav>
